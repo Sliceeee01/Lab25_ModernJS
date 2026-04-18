@@ -313,30 +313,86 @@
 // cookDinnerFast().then((result) => console.log(result));
 
 //10.3 Practic
-function checkStock() {
-    return new Promise((resolve) => {
-        setTimeout(() => resolve("Товар в наличии"), 500);
-    });
-}
+// function checkStock() {
+//     return new Promise((resolve) => {
+//         setTimeout(() => resolve("Товар в наличии"), 500);
+//     });
+// }
 
-function calculatePrice() {
-    return new Promise((resolve) => {
-        setTimeout(() => resolve(1500), 500);
-    });
-}
+// function calculatePrice() {
+//     return new Promise((resolve) => {
+//         setTimeout(() => resolve(1500), 500);
+//     });
+// }
 
-function confirmOrder(price) {
-    return new Promise((resolve) => {
-        setTimeout(() => resolve(`Заказ на ${price} руб. подтверждён`), 500);
-    });
-}
+// function confirmOrder(price) {
+//     return new Promise((resolve) => {
+//         setTimeout(() => resolve(`Заказ на ${price} руб. подтверждён`), 500);
+//     });
+// }
+// async function processOrder() {
+//     const stock = await checkStock();
+//     console.log(stock);
+//     const price = await calculatePrice();
+//     console.log(`Цена: ${price}`);
+//     const confirm = await confirmOrder(price);
+//     console.log(confirm);
+// }
+// processOrder();
 
-async function processOrder() {
-    const stock = await checkStock();
-    console.log(stock);
-    const price = await calculatePrice();
-    console.log(`Цена: ${price}`);
-    const confirm = await confirmOrder(price);
-    console.log(confirm);
-}
-processOrder();
+// console.log("Fetch API");
+// async function getUsers() {
+//   try {
+//     const response = await fetch("https://jsonplaceholder.typicode.com/users");
+//     if (!response.ok) {
+//       throw new Error(`HTTP ошибка! Статус: ${response.status}`);
+//     }
+//     const users = await response.json();
+//     console.log("Первые 3 пользователя:");
+//     users.slice(0, 3).forEach((user) => {
+//       console.log(`- ${user.name} (${user.email})`);
+//     });
+//   } catch (error) {
+//     console.log("Ошибка при загрузке пользователей:", error.message);
+//   }
+// }
+// getUsers();
+
+// async function getUserById(id) {
+//   try {
+//     const response = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
+//     const user = await response.json();
+
+//     console.log(`Пользователь #${id}:`);
+//     console.log(`Имя: ${user.name}`);
+//     console.log(`Город: ${user.address.city}`);
+//     console.log(`Компания: ${user.company.name}`);
+//   } catch (error) {
+//     console.log("Ошибка:", error.message);
+//   }
+// }
+// getUserById(1);
+
+// async function createPost() {
+//   try {
+//     const newPost = {
+//       title: "Моя первая запись",
+//       body: "Это содержание моей первой записи в блоге",
+//       userId: 1,
+//     };
+//     const response = await fetch("https://jsonplaceholder.typicode.com/posts", {
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/json",
+//       },
+//       body: JSON.stringify(newPost),
+//     });
+//     const createdPost = await response.json();
+//     console.log("Создана новая запись:");
+//     console.log("ID:", createdPost.id);
+//     console.log("Заголовок:", createdPost.title);
+//   } catch (error) {
+//     console.log("Ошибка при создании записи:", error.message);
+//   }
+// }
+// createPost();
